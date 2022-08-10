@@ -2,7 +2,7 @@ const http = require("http")
 
 const routes = {
   "/contact:get": (request, response) => {
-    response.write("Contact us page")
+    response.write("contact us page")
     return response.end()
   },
 
