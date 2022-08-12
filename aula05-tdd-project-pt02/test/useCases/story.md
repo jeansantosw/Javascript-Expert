@@ -52,3 +52,6 @@ And the car selected
 And the final price which will be R$ 244,40
 
 And DueDate which will be printed in Brazilian Portuguese format "10 de Novembro de 2020"
+
+
+https://www.templatemonsterpreview.com/pt-br/demo/75697.html?_gl=1*1v79naf*_ga*NjQxODg5NTMyLjE2NjAzMDk0MDM.*_ga_FTPYEGT5LY*MTY2MDMwOTQwMy4xLjEuMTY2MDMwOTQ1Mi4xMQ..&_ga=2.163321788.1011886954.1660309403-641889532.1660309403
