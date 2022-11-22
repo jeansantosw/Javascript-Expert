@@ -46,7 +46,12 @@ Manager.prototype = Object.create(Supervisor.prototype)
 Manager.prototype.monthlyBonuses = () => "monthlyBonuses"
 
 // Podemos chamar via prototype, mas se tentar chamar direto da erro
+console.log('anager.prototype.salary(): ',Manager.prototype.salary())
 
-console.log(Manager.prototype.salary())
+
+// Se chamar o 'new' o primeiro __proto__ vai sempre ser
+// a instancia de function , sem herdar nossa classes
+// Para acessar as classes sem o 'new' pode acessar direito via
+
 
 
