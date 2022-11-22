@@ -37,21 +37,57 @@ Employee.prototype.salary = () => "salary**"
 
 function Supervisor() {}
 // herda a instancia de employee
-Supervisor.prototype = Object(Employee.prototype)
+Supervisor.prototype = Object.create(Employee.prototype)
 // console.log(Supervisor.prototype.__proto__.__proto__ === null)
 Supervisor.prototype.profitShare = () => "profitShare**"
 
 function Manager () {}
 Manager.prototype = Object.create(Supervisor.prototype)
-Manager.prototype.monthlyBonuses = () => "monthlyBonuses"
+Manager.prototype.monthlyBonuses = () => "monthlyBonuses**"
 
 // Podemos chamar via prototype, mas se tentar chamar direto da erro
-console.log('anager.prototype.salary(): ',Manager.prototype.salary())
+console.log('manager.prototype.salary(): ',Manager.prototype.salary())
+// console.log(Manager.salary());
 
 
 // Se chamar o 'new' o primeiro __proto__ vai sempre ser
 // a instancia de function , sem herdar nossa classes
 // Para acessar as classes sem o 'new' pode acessar direito via
+// console.log('manager.prototype__proto',Manager.prototype.__proto__)
+console.log('manager.prototype__proto',Manager.prototype.__proto__)
+console.log('manager.prototype__proto === Supervisor.prototype',Manager.prototype.__proto__ === Supervisor.prototype)
+assert.deepStrictEqual(Manager.prototype.__proto__, Supervisor.prototype)
+
+
+console.log("-----------------------");
+
+// Quando chamamos o 'new' o __proto__ recebe o prototype atual do objeto
+console.log(new Manager().__proto__, new Manager().salary());
+console.log(Supervisor.prototype === new Manager().__proto__.__proto__);
+assert.deepStrictEqual(Supervisor.prototype, new Manager().__proto__.__proto__)
+
+
+console.log("------------------------");
+
+const manager = new Manager()
+console.log(manager.salary());
+console.log(manager.profitShare());
+console.log(manager.monthlyBonuses());
+
+console.log(manager.__proto__.__proto__.__proto__.__proto__.__proto__);
+
+assert.deepStrictEqual(manager.__proto__, Manager.prototype)
+assert.deepStrictEqual(manager.__proto__.__proto__, Supervisor.prototype)
+assert.deepStrictEqual(manager.__proto__.__proto__.__proto__, Employee.prototype)
+assert.deepStrictEqual(manager.__proto__.__proto__.__proto__.__proto__, Object.prototype)
+assert.deepStrictEqual(manager.__proto__.__proto__.__proto__.__proto__.__proto__, null)
+
+console.log(Manager.prototype);
+console.log(manager.__proto__);
+
+
+
+
 
 
 
