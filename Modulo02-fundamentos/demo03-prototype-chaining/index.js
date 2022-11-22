@@ -50,7 +50,7 @@ console.log('manager.prototype.salary(): ',Manager.prototype.salary())
 // console.log(Manager.salary());
 
 
-// Se chamar o 'new' o primeiro __proto__ vai sempre ser
+// Se não chamar o 'new' o primeiro __proto__ vai sempre ser
 // a instancia de function , sem herdar nossa classes
 // Para acessar as classes sem o 'new' pode acessar direito via
 // console.log('manager.prototype__proto',Manager.prototype.__proto__)
