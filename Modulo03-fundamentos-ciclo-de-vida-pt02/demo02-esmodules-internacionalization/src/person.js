@@ -10,7 +10,7 @@ export default class Person {
   formatted(language) {
     const mapData = (date) => {
       const [year, month, day] = date.split("-").map(Number)
-      // Datas em js começam do zero.
+      // Datas em js começam do zero por isso month-1.
       return new Date(year, month -1, day)
     }
 
