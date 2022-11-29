@@ -30,4 +30,18 @@ export default class Person {
         .format(mapData(this.to))
     }
   }
+
+  static generationInstanceFromString(text) {
+    const EMPTY_SPACE = ' '
+    const [id, vehicles, kmTraveled, from, to] = text.split(EMPTY_SPACE)
+    const person = new Person({
+      id,
+      kmTraveled,
+      from,
+      to,
+      vehicles: vehicles.split(',')
+    })
+
+    return person
+  }
 }
