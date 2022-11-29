@@ -30,7 +30,8 @@ export default class Person {
         .format(mapData(this.to))
     }
   }
-
+  
+  //  Método static é usado por não ser preciso nenhuma informação da class
   static generationInstanceFromString(text) {
     const EMPTY_SPACE = ' '
     const [id, vehicles, kmTraveled, from, to] = text.split(EMPTY_SPACE)
