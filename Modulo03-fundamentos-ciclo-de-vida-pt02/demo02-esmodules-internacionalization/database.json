@@ -12,5 +12,33 @@
     "kmTraveled": "200000,",
     "from": "2020-10-10",
     "to": "2021-01-01"
+  },
+  {
+    "id": "5",
+    "vehicles": ["Barco", "Navio", "Bike"],
+    "kmTraveled": "30333",
+    "from": "2020-10-10",
+    "to": "2021-01-01"
+  },
+  {
+    "id": "4",
+    "vehicles": ["Carrinho"],
+    "kmTraveled": "30000",
+    "from": "2019-10-10",
+    "to": "2020-10-01"
+  },
+  {
+    "id": "3",
+    "vehicles": ["test"],
+    "kmTraveled": "50000",
+    "from": "2010-10-10",
+    "to": "2020-10-10"
+  },
+  {
+    "id": "2",
+    "vehicles": ["Moto"],
+    "kmTraveled": "200000,",
+    "from": "2020-10-10",
+    "to": "2021-01-01"
   }
 ]
