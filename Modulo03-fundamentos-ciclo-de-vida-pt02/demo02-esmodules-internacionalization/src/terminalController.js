@@ -29,6 +29,11 @@ export default class TerminalController {
     this.data = data
   }
 
+  updateTable(item) {
+    this.data.push(item)
+    this.print(chalkTable(this.getTableOptions(), this.data))
+  }
+
   getTableOptions() {
     return {
       leftPad: 2,

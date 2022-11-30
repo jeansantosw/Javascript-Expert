@@ -19,7 +19,8 @@ async function mainLoop() {
     }
 
     const person = Person.generationInstanceFromString(answer)
-    console.log('person', person.formatted(DEFAULT_LANG));
+    terminalController.updateTable(person.formatted(DEFAULT_LANG))
+    // console.log('person', person.formatted(DEFAULT_LANG));
     return mainLoop()
 
   } catch(error) {
