@@ -11,6 +11,10 @@ function *main() {
   yield* calculation(2,2)
 }
 
+// GENERATORS é a melhor forma de fazer uma função quando se precisa
+// retornar dados sobre demanda, os generators tem como caracteristica 
+// o * na função e o seu return é o yield
+
 const generator = main()
 // console.log(generator.next());
 // console.log(generator.next());
