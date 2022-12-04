@@ -18,3 +18,13 @@ user[uniqueKey] = 'value for Symbol'
 assert.deepStrictEqual(user.userName, 'value for normal Object')
 assert.deepStrictEqual(user[Symbol("userName")], undefined)
 assert.deepStrictEqual(user[uniqueKey], 'value for Symbol')
+
+// É difícil de pegar mas não é secreto
+// console.log('symbol: ', Object.getOwnPropertySymbols(user)[0]);
+
+assert.deepStrictEqual(Object.getOwnPropertySymbols(user)[0], uniqueKey)
+
+// byPass - má prática (nem tem no codebase do node)
+
+user[Symbol.for('password')] = 123
+assert.deepStrictEqual(user[Symbol.for('password')], 123)
