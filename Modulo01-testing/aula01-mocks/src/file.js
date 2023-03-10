@@ -47,6 +47,7 @@ class File {
 
   static parseCSVToJson(csvString) {
     const lines = csvString.split('\n')
+    // split retira a primera posição do array 
     const firstLine = lines.shift()
     const header = firstLine.split(',')
     const users = lines.map((line) => {
