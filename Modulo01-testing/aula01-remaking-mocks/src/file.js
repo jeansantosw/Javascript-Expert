@@ -4,4 +4,4 @@ class File {
   }
 }
 
-module.export = File
+module.exports = File
