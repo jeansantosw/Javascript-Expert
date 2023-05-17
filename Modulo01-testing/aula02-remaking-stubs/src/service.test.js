@@ -1,6 +1,6 @@
 const Service = require("./service");
 
-const BASE_URL_1 = "https://pokeapi.co/api/v2/pokemon/ditto"
+const BASE_URL_1 = "https://swapi.dev/api/planets/1/"
 
 ;(async () => {
   {
