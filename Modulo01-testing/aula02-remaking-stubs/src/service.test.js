@@ -36,7 +36,7 @@ const mocks = {
     const expected = {
       name: "Tatooine",
       surfaceWater: "1",
-      appeardIn: "5"
+      appeardIn: 5
     }
 
     const results = await service.getPlanets(BASE_URL_1)
