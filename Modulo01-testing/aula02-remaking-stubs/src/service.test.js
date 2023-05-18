@@ -43,4 +43,15 @@ const mocks = {
     assert.deepStrictEqual(expected, results)
   }
 
+  {
+    const expected = {
+      name: "Alderaan",
+      surfaceWater: "40",
+      appeardIn: 2
+    }
+
+    const results = await service.getPlanets(BASE_URL_2)
+    assert.deepStrictEqual(expected, results)
+  }
+
 })()
