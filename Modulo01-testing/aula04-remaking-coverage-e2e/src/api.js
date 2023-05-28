@@ -14,8 +14,6 @@ const routes = {
 function handle(request, response) {
   const {url, method} = request
   const routeKey = `${url.toLowerCase()}:${method.toLowerCase()}`
-  // console.log(routeKey);
-  // return response.end()
   const chosen = routes[routeKey] || routes.default
   return chosen(request, response)
 }
