@@ -36,7 +36,7 @@ const assert = require("assert")
       {
         id: 123,
         name: "Jean Santos",
-        profession: "Javascript",
+        profession: "Javascript Specialist",
         age: 33
       },
       {
