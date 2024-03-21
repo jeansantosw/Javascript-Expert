@@ -1,8 +1,19 @@
 const http = require("http")
+const DEFAULT_USER = {
+  username: "Jeansantos",
+  password: "1234"
+}
+
+const { once } = require("events")
 
 const routes = {
   '/contact:get': (request, response) => {
     response.write('contact us page!')
+    return response.end()
+  },
+  '/login:post': async (request, response) => {
+    const data = await once(request, "data")
+    console.log("data", data.toString());
     return response.end()
   },
   default(request, response) {
