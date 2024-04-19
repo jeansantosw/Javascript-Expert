@@ -42,6 +42,7 @@ const item = {
 //-----------------------------------
 
 console.assert(item + 0 === '{"name":"Jean Santos","age":30}0')
+console.log(item + 0)
 
 
 // const r = "Hello" || 1
